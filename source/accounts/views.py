@@ -35,7 +35,6 @@ class GuestOnlyView(View):
         # Redirect to the index page if the user already authenticated
         if request.user.is_authenticated:
             return redirect(settings.LOGIN_REDIRECT_URL)
-
         return super().dispatch(request, *args, **kwargs)
 
 
@@ -107,7 +106,7 @@ class SignUpView(GuestOnlyView, FormView):
 
         # Change the username to the "user_ID" form
         if settings.DISABLE_USERNAME:
-            user.username = f'user_{user.id}'
+            user.username = 'user_{user.id}'
             user.save()
 
         if settings.ENABLE_USER_ACTIVATION:

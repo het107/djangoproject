@@ -6,3 +6,6 @@ name = "pypi"
 [packages]
 Django = "==2.1.7"
 "django-bootstrap4" = "==0.0.7"
+
+[dev-packages]
+pylint = "<2.0.0"

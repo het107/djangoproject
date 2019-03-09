@@ -1,6 +1,5 @@
 {% extends 'layouts/default/page.html' %}
 
-{% load bootstrap4 %}
 {% load i18n %}
 
 {% block content %}
@@ -10,7 +9,6 @@
     <form method="post">
 
         {% csrf_token %}
-        {% bootstrap_form form %}
 
         <button class="btn btn-primary">{% trans 'Log in' %}</button>
 

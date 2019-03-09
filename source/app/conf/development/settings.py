@@ -24,8 +24,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
 
-    # Vendor apps
-    'bootstrap4',
+    # # Vendor apps
+    # 'bootstrap3',
 
     # Application apps
     'main',
@@ -67,9 +67,10 @@ WSGI_APPLICATION = 'app.wsgi.application'
 
 EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
 EMAIL_FILE_PATH = os.path.join(CONTENT_DIR, 'tmp/emails')
-EMAIL_HOST_USER = 'test@example.com'
-DEFAULT_FROM_EMAIL = 'test@example.com'
+# EMAIL_HOST_USER = 'test@example.com'
+# DEFAULT_FROM_EMAIL = 'test@example.com'
 
+DEBUG = True
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
